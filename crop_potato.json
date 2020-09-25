@@ -24,8 +24,8 @@
 				}
 			},			
 			"residueParams": ["include-from-file", "monica-parameters/crop-residues/potato.json"]
-		},
-	
+		}	
+	},
 	
 	"fert-params": {
 		"AN": ["include-from-file", "mineral-fertilisers/AN.json"],
