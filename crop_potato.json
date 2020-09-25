@@ -2,9 +2,9 @@
 	"crops": {
 		"PO": {			
 			"cropParams": {
-				"species": ["include-from-file", "monica-parameters/projects/sustag/potato.json"],
+				"species": ["include-from-file", "projects/sustag/potato.json"],
 				"cultivar": {
-					"=": ["include-from-file", "monica-parameters/projects/sustag/moderately-early-potato.json"],
+					"=": ["include-from-file", "projects/sustag/moderately-early-potato.json"],
 					"BeginSensitivePhaseHeatStress": 0,
 					"EndSensitivePhaseHeatStress": 0,
 					"OrganIdsForSecondaryYield": [
@@ -23,7 +23,7 @@
 					]
 				}
 			},			
-			"residueParams": ["include-from-file", "monica-parameters/crop-residues/potato.json"]
+			"residueParams": ["include-from-file", "crop-residues/potato.json"]
 		}	
 	},
 	

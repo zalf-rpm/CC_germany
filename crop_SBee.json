@@ -2,9 +2,9 @@
 	"crops": {
 		"SBee": {			
 			"cropParams": {
-				"species": ["include-from-file", "monica-parameters/projects/sustag/sugar-beet.json"],
+				"species": ["include-from-file", "projects/sustag/sugar-beet.json"],
 				"cultivar": {
-					"=": ["include-from-file", "monica-parameters/projects/sustag/sugar-beet-cv.json"],
+					"=": ["include-from-file", "projects/sustag/sugar-beet-cv.json"],
 					"BeginSensitivePhaseHeatStress": 0,
 					"EndSensitivePhaseHeatStress": 0,
 					"OrganIdsForSecondaryYield": [
@@ -23,10 +23,10 @@
 					]
 				}
 			},			
-			"residueParams": ["include-from-file", "monica-parameters/crop-residues/beet.json"]
+			"residueParams": ["include-from-file", "crop-residues/beet.json"]
 		}	
 	},
-	
+
 	"fert-params": {
 		"AN": ["include-from-file", "mineral-fertilisers/AN.json"],
 		"urea": ["include-from-file", "mineral-fertilisers/U.json"],
