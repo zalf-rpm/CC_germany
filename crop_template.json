@@ -1,0 +1,165 @@
+  {
+	"__UNDERSCORES IN FRONT MEANS IGNORE THE KEY, this is just to keep a valid JSON file": "",
+	"__!!! check and beautify JSON files with http://codebeautify.org/jsonviewer !!!": "",
+	
+	"__this is the path which is prepended to 'include-from-file' paths, if they are relative paths": "",
+	"_include-file-base-path": "../",
+	
+	"__user defined crops section to be used via references": "",
+	"crops": {		
+		"SM": {
+			"is-winter-crop": false,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/maize.json"],
+				"cultivar": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/silage-maize.json"]
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/maize.json"]
+		},
+		"WW": {
+			"is-winter-crop": true,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/wheat.json"],
+				"cultivar": { 
+					"=": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/winter-wheat.json"],
+					"OrganIdsForSecondaryYield": [
+							{
+								"organId": 2,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0
+							},
+							{
+								"organId": 3,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0
+							}
+						]
+					}
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/wheat.json"]
+		},
+		"SB": {
+			"is-winter-crop": false,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/barley.json"],
+				"cultivar": { 
+					"=": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/spring-barley.json"],
+					"OrganIdsForSecondaryYield": [
+							{
+								"organId": 2,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0
+							},
+							{
+								"organId": 3,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0
+							}
+						]
+					}
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/barley.json"]
+		},
+		"WW_1": {
+			"is-winter-crop": true,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/wheat.json"],
+				"cultivar": { 
+					"=": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/winter-wheat.json"],
+					"OrganIdsForSecondaryYield": [
+							{
+								"organId": 2,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0.8
+							},
+							{
+								"organId": 3,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0.8
+							}
+						]
+					}
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/wheat.json"]
+		},
+		"SB_1": {
+			"is-winter-crop": false,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/barley.json"],
+				"cultivar": { 
+					"=": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/spring-barley.json"],
+					"OrganIdsForSecondaryYield": [
+							{
+								"organId": 2,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0.8
+							},
+							{
+								"organId": 3,
+								"type": "YieldComponent",
+								"yieldDryMatter": 0.86,
+								"yieldPercentage": 0.8
+							}
+						]
+					}
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/barley.json"]
+		},
+		"WR": {
+			"is-winter-crop": true,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/rape.json"],
+				"cultivar": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/winter-rape.json"]
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/rape.json"]
+		},
+		"WRC": {
+			"is-winter-crop": true,
+			"cropParams": {
+				"species": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/rape.json"],
+				"cultivar": { 
+					"=": ["include-from-file", "monica-parameters/projects/macsur-croprotations-cz/winter-rape.json"],
+					"CultivarName": "cover"
+				}
+			},
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/rape.json"]
+		}
+	},
+	
+	"__user defined fertilizer parameteres section to be used via references": "",
+	"fert-params": {
+		"urea": ["include-from-file", "monica-parameters/mineral-fertilisers/U.json"],
+		"manure": {
+            "DEFAULT": ["include-from-file", "monica-parameters/organic-fertilisers/CAM.json"],
+            "AOM_DryMatterContent": 0.3,
+            "CN_Ratio_AOM_Fast": 0,
+            "NConcentration": 0.017,
+			"AOM_NH4Content": 0.003,
+			"PartAOM_to_AOM_Fast": 0.2,
+			"PartAOM_to_AOM_Slow": 0.8,
+			"AOM_SlowDecCoeffStandard": 0.000312
+        }
+	}, 
+
+	"cropRotation": [
+		{
+			"worksteps": [ 
+				{ "date": "1961-01-01", "type": "SetValue", "var": ["NH4", [1,4]], "value": 0.01 },
+				{ "date": "1961-01-01", "type": "SetValue", "var": ["NH4", [1,4]], "value": 0.0036 },
+				{ "date": "1961-01-01", "type": "SetValue", "var": ["Mois", [1, 10]], "value": ["=", ["Fc", [1, 10]]] }
+			]
+		}
+	],
+
+	"CropParameters": {
+        "DEFAULT": ["include-from-file", "monica-parameters/general/crop.json"],
+		"AdjustRootDepthForSoilProps": false,
+		"__enable_Photosynthesis_WangEngelTemperatureResponse__": true
+    }
+  }

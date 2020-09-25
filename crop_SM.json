@@ -1,0 +1,68 @@
+  {
+	"crops": {
+		"SM": {
+			"cropParams": {
+				"species": {
+					"=": ["include-from-file", "projects/sustag/maize.json"],
+				"FieldConditionModifier":0.95
+			},
+				"cultivar": {
+					"=": ["include-from-file", "projects/sustag/silage-maize.json"],
+					"OrganIdsForSecondaryYield": [
+						{
+							"organId": 2,
+							"type": "YieldComponent",
+							"yieldDryMatter": 0.32,
+							"yieldPercentage": 0.1
+						},
+						{
+							"organId": 3,
+							"type": "YieldComponent",
+							"yieldDryMatter": 0.32,
+							"yieldPercentage": 0.1
+						}
+					]
+				}
+			},
+			"residueParams": ["include-from-file", "crop-residues/maize.json"]
+		}
+	},
+	
+	
+	"fert-params": {
+		"AN": ["include-from-file", "mineral-fertilisers/AN.json"],
+		"urea": ["include-from-file", "mineral-fertilisers/U.json"],
+		"org_fert": ["include-from-file", "organic-fertilisers/CAM.json"]
+	}, 	
+
+	"cropRotation": [
+		{
+			"worksteps": [
+			  { "date": "0000-05-04", "type": "Sowing", "crop": ["ref", "crops", "SM"] }, 
+			  {
+				"type": "NDemandFertilization",
+				"days": 1,
+				"after": "Sowing",		
+				"N-demand": [110.0, "kg"],
+				"depth": [0.3, "m"],
+				"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
+			},
+			{
+				"type": "NDemandFertilization",
+				"days": 30,
+				"after": "Sowing",
+				"N-demand": [105.0, "kg"],
+				"depth": [0.9, "m"],
+				"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
+			},
+			{ "date": "0000-09-15", "type": "Harvest", "crop": ["ref", "crops", "SM"] }
+			]
+		}
+	],
+	
+	  "CropParameters": {
+		"DEFAULT": ["include-from-file", "general/crop.json"]
+	  }
+	}
+
+

@@ -1,0 +1,86 @@
+  {
+	"crops": {
+		"SBee": {
+			"is-winter-crop": true,
+			"cropParams": {
+				"species": {
+					"=": ["include-from-file", "projects/sustag/sugar-beet.json"],
+					"TransitionStageLeafExp": 2,
+					"FieldConditionModifier":0.9
+				},
+				"cultivar": {
+					"=": ["include-from-file", "projects/sustag/sugar-beet-cv.json"],
+					"OrganIdsForSecondaryYield": [
+						{
+							"organId": 2,
+							"type": "YieldComponent",
+							"yieldDryMatter": 0.86,
+							"yieldPercentage": 1
+						},
+						{
+							"organId": 3,
+							"type": "YieldComponent",
+							"yieldDryMatter": 0.86,
+							"yieldPercentage": 1
+						},
+						{
+							"organId": 4,
+							"type": "YieldComponent",
+							"yieldDryMatter": 0.86,
+							"yieldPercentage": 0.15
+						}
+					],
+					"EarlyRefLeafExp": 8,
+					"RefLeafExp": 16
+				}
+			},
+			"residueParams": ["include-from-file", "crop-residues/sugar-beet.json"]
+		}
+	},
+	
+	
+	"fert-params": {
+		"AN": ["include-from-file", "mineral-fertilisers/AN.json"],
+		"urea": ["include-from-file", "mineral-fertilisers/U.json"],
+		"org_fert": ["include-from-file", "organic-fertilisers/CAM.json"]
+	}, 	
+
+	"cropRotation": [
+		{
+			"worksteps": [
+			  { "date": "0000-10-01", "type": "Sowing", "crop": ["ref", "crops", "SBee"] },
+			  {
+				"type": "NDemandFertilization",
+				"days": 60,
+				"after": "Sowing",
+				"N-demand": [40.0, "kg"],
+				"depth": [0.3, "m"],
+				"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
+			},
+			{
+				"type": "NDemandFertilization",
+				"days": 120,
+				"after": "Sowing",
+				"N-demand": [80.0, "kg"],
+				"depth": [0.9, "m"],
+				"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
+			},
+			{
+				"type": "NDemandFertilization",
+				"days": 150,
+				"after": "Sowing",
+				"N-demand": [40.0, "kg"],
+				"depth": [0.9, "m"],
+				"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
+			},
+			  { "date": "0001-09-05", "type": "Harvest", "crop": ["ref", "crops", "SBee"] }		
+			]
+		  }
+	  ],
+	
+	  "CropParameters": {
+		"DEFAULT": ["include-from-file", "general/crop.json"]
+	  }
+	}
+
+
