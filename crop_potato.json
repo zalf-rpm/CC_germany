@@ -1,20 +1,17 @@
   {
 	"crops": {
-		"PO": {
-			"is-winter-crop": true,
+		"PO": {			
 			"cropParams": {
-				"species": {
-					"=": ["include-from-file", "projects/sustag/potato.json"],
-					"TransitionStageLeafExp": 2,
-					"FieldConditionModifier":0.9
-				},
+				"species": ["include-from-file", "monica-parameters/projects/sustag/potato.json"],
 				"cultivar": {
-					"=": ["include-from-file", "projects/sustag/moderately-early-potato.json"],
+					"=": ["include-from-file", "monica-parameters/projects/sustag/moderately-early-potato.json"],
+					"BeginSensitivePhaseHeatStress": 0,
+					"EndSensitivePhaseHeatStress": 0,
 					"OrganIdsForSecondaryYield": [
 						{
 							"organId": 2,
 							"type": "YieldComponent",
-							"yieldDryMatter": 0.86,
+							"yieldDryMatter": 0.16,
 							"yieldPercentage": 1
 						},
 						{
@@ -22,21 +19,12 @@
 							"type": "YieldComponent",
 							"yieldDryMatter": 0.86,
 							"yieldPercentage": 1
-						},
-						{
-							"organId": 4,
-							"type": "YieldComponent",
-							"yieldDryMatter": 0.86,
-							"yieldPercentage": 0.15
 						}
-					],
-					"EarlyRefLeafExp": 8,
-					"RefLeafExp": 16
+					]
 				}
-			},
-			"residueParams": ["include-from-file", "crop-residues/potato.json"]
-		}
-	},
+			},			
+			"residueParams": ["include-from-file", "monica-parameters/crop-residues/potato.json"]
+		},
 	
 	
 	"fert-params": {
