@@ -7,4 +7,3 @@ run-id,crop-ids,sim.json,crop.json,site.json,climate_data,climate_model,climate_
 6,WR,sim.json,crop_WR.json,site.json,dwd,,,germany_ubn_1901-2018_unzipped,1970,2010,FALSE,FALSE,TRUE,TRUE,TRUE,auto,auto,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,360,
 7,WRa,sim.json,crop_WRa.json,site.json,dwd,,,germany_ubn_1901-2018_unzipped,1970,2010,FALSE,FALSE,TRUE,TRUE,TRUE,auto,auto,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,360,
 8,WW,sim.json,crop_WW.json,site.json,dwd,,,germany_ubn_1901-2018_unzipped,1970,2010,FALSE,FALSE,TRUE,TRUE,TRUE,auto,auto,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,360,
-
