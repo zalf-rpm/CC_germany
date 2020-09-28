@@ -62,27 +62,14 @@
 			"crop", [
 				["CM-count", "FIRST"],
 				["Crop", "LAST"],
-				["DOY|last-doy", "LAST"],
-				["DOY|SowDOY", "FIRST"],
-				["DOY|HarvDOY", "LAST"],
-				["Year|SowYear", "FIRST"],
 				["Year", "LAST"],
-				["RelDev", "LAST"],
-				["LAI|LAI-max", "MAX"],
 				["Yield|Yield-last", "LAST"],
-				["Count|Cycle-length", "SUM"],
-				["TraDef|TraDef-avg", "AVG"],
-				["NDef|NDef-avg", "AVG"],
-				["NFert|crop-sum-nfert", "SUM"],
-				["NLeach|crop-sum-nleach", "SUM"],
-				["Stage|Stage-harv", "LAST"]
+				["Count|Cycle-length", "SUM"]
 			],
 			"yearly", [
 				["Year|CM-count", "FIRST"],
 				["Year", "FIRST"],
-				["NLeach|yearly-sum-nleach", "SUM"],
-				["SOC|SOC-upper-soil-layer", [1, 3, "SUM"], "SUM"],
-				["SOC|SOC-lower-soil-layer", [4, 20, "SUM"], "SUM"]
+				["NLeach|yearly-sum-nleach", "SUM"]
 			]
 		],
 		"_events": [			
