@@ -1,0 +1,253 @@
+  {
+	"crops": {
+		"SM": {
+			"cropParams": {
+				"species": {
+					"=": ["include-from-file", "projects/fnr-voce/Landscape2018/maize.json"],
+					"VCMAX25": 100,
+					"EF_MONO":5.5,
+					"EF_MONOS": 0,
+					"EF_ISO": 0.0,
+					"CarboxylationPathway": 1
+				},
+				"cultivar": {
+					"=": ["include-from-file", "projects/fnr-voce/Landscape2018/silage-maize.json"],
+					"AssimilatePartitioningCoeff": [
+						[
+							0.5,
+							0.5,
+							0,
+							0
+						],
+						[
+							0.3,
+							0.4,
+							0.3,
+							0
+						],
+						[
+							0.2,
+							0.3,
+							0.5,
+							0
+						],
+						[
+							0.05,
+							0.05,
+							0.65,
+							0.25
+						],
+						[
+							0,
+							0,
+							0,
+							1
+						],
+						[
+							0,
+							0,
+							0,
+							1
+						],
+						[
+							0,
+							0,
+							0,
+							1
+						]
+					],
+					"DroughtStressThreshold": [
+						1,
+						1,
+						1,
+						1,
+						1,
+						1,
+						1
+					],
+					"_StageTemperatureSum": [
+						[
+							68,
+							483,
+							140,
+							161,
+							153,
+							305,
+							25
+						],
+						"°C d"
+					]
+				}
+			},
+			"residueParams": ["include-from-file", "crop-residues/maize.json"]
+		},
+
+		"WRa": {
+			"is-winter-crop": true,
+			"cropParams": {
+					"species": {
+						"=": ["include-from-file", "projects/fnr-voce/Landscape2018/rape.json"],
+						"EF_MONO":4.5,
+						"EF_MONOS": 0,
+						"EF_ISO": 3,
+						"VCMAX25": 100,
+						"__FieldConditionModifier": 0.8
+					},
+					"cultivar": {
+						"=": ["include-from-file", "projects/fnr-voce/Landscape2018/winter-rape_ts.json"],
+						"AssimilatePartitioningCoeff": [
+						[
+							0.6,
+							0.4,
+							0,
+							0
+						],
+						[
+							0.4,
+							0.25,
+							0.35,
+							0
+						],
+						[
+							0.1,
+							0.05,
+							0.75,
+							0
+						],
+						[
+							0,
+							0,
+							0.1,
+							0.9
+						],
+						[
+							0,
+							0,
+							0,
+							1
+						],
+						[
+							0,
+							0,
+							0,
+							1
+						]
+					],
+					"StageTemperatureSum": [
+						[
+							175,
+							402,
+							129,
+							224,
+							706,
+							25
+						],
+						"°C d"
+					]
+				}
+			},
+			"residueParams": ["include-from-file", "crop-residues/rape.json"]
+		}
+	},
+	
+	"fert-params": {
+		"AN": ["include-from-file", "mineral-fertilisers/AN.json"],
+		"org_fert": ["include-from-file", "organic-fertilisers/PIS.json"]
+	}, 	
+
+	"cropRotation": {
+
+		"SM": [
+			{
+				"worksteps": {
+					"sowing": {
+						"fixed": { 
+							"date": "0000-04-25", 
+							"type": "Sowing", 
+							"crop": ["ref", "crops", "SM"] 
+						},
+						"auto": { 
+							"type": "AutomaticSowing", 
+							"crop": ["ref", "crops", "SM"],
+							"earliest-date": "0000-04-05",
+							"latest-date": "0000-05-10",
+							"min-temp": 8.0,
+							"days-in-temp-window": 5,
+							"min-%-asw": 0,
+							"max-%-asw": 100,
+							"max-3d-precip-sum": 5,
+							"max-curr-day-precip": 0.5,
+							"temp-sum-above-base-temp": 380,
+							"base-temp": 0 
+						}
+					},
+					"harvest": {
+						"fixed": { 
+							"type": "Harvest", 
+							"date": "0000-09-01"
+						},
+						"auto": { 
+							"type": "AutomaticHarvest", 
+							"latest-date": "0000-09-15",
+							"min-%-asw": 0,
+							"max-%-asw": 100,
+							"max-3d-precip-sum": 5,
+							"max-curr-day-precip": 1,
+							"harvest-time": "maturity"
+						}
+					}
+				}
+			}
+		],
+
+		"WRa": [
+			{
+				"worksteps": {
+					"sowing": {
+						"fixed": { 
+							"date": "0000-09-11", 
+							"type": "Sowing", 
+							"crop": ["ref", "crops", "WRa"] 
+						},
+						"auto": { 
+							"type": "AutomaticSowing", 
+							"crop": ["ref", "crops", "WRa"],
+							"earliest-date": "0000-08-26",
+							"latest-date": "0000-10-09",
+							"min-temp": 22.0,
+							"days-in-temp-window": 10,
+							"min-%-asw": 0,
+							"max-%-asw": 100,
+							"max-3d-precip-sum": 2,
+							"max-curr-day-precip": 0.1,
+							"temp-sum-above-base-temp": 0,
+							"base-temp": 0 
+						}
+					},
+					"harvest": {
+						"fixed": { 
+							"type": "Harvest", 
+							"date": "0001-06-30"
+						},
+						"auto": { 
+							"type": "AutomaticHarvest", 
+							"latest-date": "0001-08-22",
+							"min-%-asw": 0,
+							"max-%-asw": 100,
+							"max-3d-precip-sum": 5,
+							"max-curr-day-precip": 1,
+							"harvest-time": "maturity"
+						}
+					}
+				}
+			}
+		]
+	},
+
+	"CropParameters": {
+		"DEFAULT": ["include-from-file", "general/crop.json"],
+		"__enable_Photosynthesis_WangEngelTemperatureResponse__": false,
+		"__enable_T_response_leaf_expansion__": false,
+		"__enable_hourly_FvCB_photosynthesis__": true
+	}
+}
