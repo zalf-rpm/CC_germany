@@ -149,7 +149,7 @@ def run_producer(server = {"server": None, "port": None}, shared_id = None):
         "crop.json": TEMPLATE_CROP_JSON,
         "site.json": TEMPLATE_SITE_JSON,
         "setups-file": SETUP_FILE,
-        "run-setups": RUN_SETUP,
+        "run-periods": RUN_SETUP,
         "shared_id": shared_id
     }
     
@@ -172,7 +172,7 @@ def run_producer(server = {"server": None, "port": None}, shared_id = None):
 
     # read setup from csv file
     setups = Mrunlib.read_sim_setups(paths["path-to-projects-dir"] + PROJECT_FOLDER + config["setups-file"])
-    run_setups = json.loads(config["run-setups"])
+    run_setups = json.loads(config["run-periods"])
     print("read sim setups: ", paths["path-to-projects-dir"] + PROJECT_FOLDER + config["setups-file"])
 
     #transforms geospatial coordinates from one coordinate reference system to another
