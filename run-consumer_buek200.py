@@ -538,6 +538,7 @@ def run_consumer(leave_after_finished_run = True, server = {"server": None, "por
         try:
             #start_time_recv = timeit.default_timer()
             msg = socket.recv_json(encoding="latin-1")
+            print(msg)
             #elapsed = timeit.default_timer() - start_time_recv
             #print("time to receive message" + str(elapsed))
             #start_time_proc = timeit.default_timer()
