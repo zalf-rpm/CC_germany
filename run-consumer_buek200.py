@@ -282,7 +282,7 @@ def run_consumer(leave_after_finished_run = True, server = {"server": None, "por
         "start-row": "0",
         "end-row": "-1",
         "shared_id": shared_id,
-        "no-of-setups": 10,
+        "no-of-setups": 100,
         "timeout": 600000 # 10 minutes
     }
 
