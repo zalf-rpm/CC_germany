@@ -27,4 +27,3 @@ run-id,crop-ids,sim.json,crop.json,site.json,climate_data,climate_model,climate_
 26,WB,sim_cmip.json,crop_WB.json,site.json,dwd/cmip_cordex_reklies/,,,csv/ICHEC-EC-EARTH/SMHI-RCA4/rcp85/r12i1p1/v1,2021,2060,FALSE,FALSE,TRUE,TRUE,TRUE,fixed,fixed,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,360,
 27,WRa,sim_cmip.json,crop_WRa.json,site.json,dwd/cmip_cordex_reklies/,,,csv/ICHEC-EC-EARTH/SMHI-RCA4/rcp85/r12i1p1/v1,2021,2060,FALSE,FALSE,TRUE,TRUE,TRUE,fixed,fixed,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,360,
 28,WW,sim_cmip.json,crop_WW.json,site.json,dwd/cmip_cordex_reklies/,,,csv/ICHEC-EC-EARTH/SMHI-RCA4/rcp85/r12i1p1/v1,2021,2060,FALSE,FALSE,TRUE,TRUE,TRUE,fixed,fixed,TRUE,FALSE,FALSE,FALSE,TRUE,FALSE,FALSE,FALSE,360,
-
