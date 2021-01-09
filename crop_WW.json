@@ -73,7 +73,15 @@
 				"depth": [0.9, "m"],
 				"partition": ["include-from-file", "mineral-fertilisers/AN.json"]
 			},
-			  { "date": "0001-09-05", "type": "Harvest", "crop": ["ref", "crops", "WW"] }	
+			  { "date": "0001-09-05", "type": "Harvest", "crop": ["ref", "crops", "WW"] },
+			  {
+				"type": "OrganicFertilization",
+				"days": 1,
+				"after": "Harvest",
+				"amount": [15000, "kg"],
+				"parameters": ["include-from-file", "organic-fertilisers/CAM.json"],
+				"incorporation": true
+			  }				
 			]
 		  }
 	  ],
