@@ -5,7 +5,8 @@
 			"cropParams": {
 				"species": {
 					"=": ["include-from-file", "crops/rye.json"],
-					"TransitionStageLeafExp": 2
+					"TransitionStageLeafExp": 2,
+					"FieldConditionModifier":0.8
 				},
 				"cultivar": {
 					"=": ["include-from-file", "crops/rye/winter-rye.json"],
