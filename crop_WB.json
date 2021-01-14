@@ -5,7 +5,7 @@
 			"cropParams": {
 				"species": {
 					"=": ["include-from-file", "projects/sustag/barley.json"],
-				"FieldConditionModifier":1.2
+				"FieldConditionModifier":1
 			},
 				"cultivar": {
 					"=": ["include-from-file", "projects/sustag/winter-barley.json"],
