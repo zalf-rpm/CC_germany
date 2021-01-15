@@ -6,7 +6,7 @@
 				"species": {
 					"=": ["include-from-file", "projects/sustag/wheat.json"],
 					"TransitionStageLeafExp": 2,
-					"FieldConditionModifier":0.9
+					"FieldConditionModifier":0.86
 				},
 				"cultivar": {
 					"=": ["include-from-file", "projects/sustag/winter-wheat.json"],

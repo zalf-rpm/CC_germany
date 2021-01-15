@@ -4,6 +4,7 @@
 			"is-winter-crop": true,
 			"cropParams": {
 				"species": ["include-from-file", "projects/sustag/rape.json"],
+				"FieldConditionModifier":0.91,
 				"cultivar": {
 					"=": ["include-from-file", "projects/sustag/winter-rape.json"],
 					"OrganIdsForSecondaryYield": [
