@@ -366,11 +366,11 @@ def run_consumer(leave_after_finished_run = True, server = {"server": None, "por
                 sr_gk5 = xllcorner + (scellsize / 2) + scol * scellsize
 
                 # check if current grid cell is used for agriculture                
-                corine_id = corine_gk5_interpolate(sr_gk5, sh_gk5)
-                if corine_id not in [0,1,2,3,4,5,6,7,8,9,10,11,12]:
-                    soil_grid_template[srow, scol] = -9999
+                #corine_id = corine_gk5_interpolate(sr_gk5, sh_gk5)
+                #if corine_id not in [2,3,4]:
+                #    soil_grid_template[srow, scol] = -9999
 
-        print("filtered through CORINE")
+        #print("filtered through CORINE")
 
     #set all data values to one, to count them later
     soil_grid_template[soil_grid_template != -9999] = 1
