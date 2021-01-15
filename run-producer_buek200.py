@@ -360,7 +360,7 @@ def run_producer(server = {"server": None, "port": None}, shared_id = None):
                 # check if current grid cell is used for agriculture                
                 if setup["landcover"]:
                     corine_id = corine_gk5_interpolate(sr_gk5, sh_gk5)
-                    if corine_id not in [2,3,4]:
+                    if corine_id not in [0,1,2,3,4,5,6,7,8,9,10,11,12]:
                         continue
 
                 rNfactor = rnf_gk5_interpolate(sr_gk5, sh_gk5)
