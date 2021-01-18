@@ -29,8 +29,18 @@ nodata_value  0"""
     print("wrote:", path_to_save_file)
 
 
-for year in [2017, 2018, 2019]:
-    for crop in ["WiRa", "WiBa", "MAI", "WiWh"]:
+year_to_crops = {
+    #2017: ["WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
+    2017: ["SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
+    #2018: ["WiTr", "WiRy", "SuBe", "WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
+    2018: ["WiTr", "WiRy", "SuBe", "SpWh", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
+    #2019: ["WiTr", "WiRy", "SuBe", "WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"]
+    2019: ["WiTr", "WiRy", "SuBe", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"]
+}
+
+for year, crops in year_to_crops.items():
+    #for crop in ["WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"]:
+    for crop in crops:
         convert("monica-data/Crop Maps Germany/{year}/CTM_{year}_{crop}.tif".format(year=year, crop=crop))
 
 
