@@ -4,7 +4,7 @@
 			"cropParams": {
 				"species": {
 					"=": ["include-from-file", "projects/sustag/maize.json"],
-				"FieldConditionModifier":1
+				"FieldConditionModifier":0.95
 			},
 				"cultivar": {
 					"=": ["include-from-file", "projects/sustag/silage-maize.json"],
