@@ -30,12 +30,9 @@ nodata_value  0"""
 
 
 year_to_crops = {
-    #2017: ["WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
-    2017: ["SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
+    2017: ["WiTr", "WiRy", "SuBe"],# "WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
     #2018: ["WiTr", "WiRy", "SuBe", "WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
-    2018: ["WiTr", "WiRy", "SuBe", "SpWh", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
-    #2019: ["WiTr", "WiRy", "SuBe", "WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"]
-    2019: ["WiTr", "WiRy", "SuBe", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"]
+    #2019: ["WiTr", "WiRy", "SuBe", "WiRa", "WiBa", "MAI", "WiWh", "SWF", "SUN", "STWB", "SpWh", "SpOa", "SpBa", "POT", "ORC", "ONIO", "MAIG", "LeVeg", "LEGU", "HOPS", "GRPV", "GRL", "CAR", "ASPA"],
 }
 
 for year, crops in year_to_crops.items():
