@@ -130,7 +130,7 @@ def write_row_to_grids(row_col_data, row, ncols, header, path_to_output_dir, pat
 
             if not os.path.isfile(path_to_row_file):
                 with open(path_to_row_file, "w") as _:
-                    _.write("CM-count,row,col,Crop,Yield-last\n")
+                    _.write("CM-count,row,col,Crop,Yield-last, yearly-atmco2\n")
                     #_.write("CM-count,row,col,yearly-avg-tavg\n")
 
             with open(path_to_row_file, 'a') as _:

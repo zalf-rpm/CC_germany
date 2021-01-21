@@ -69,7 +69,8 @@
 			"yearly", [
 				["Year|CM-count", "FIRST"],
 				["Year", "FIRST"],
-				["NLeach|yearly-sum-nleach", "SUM"]
+				["NLeach|yearly-sum-nleach", "SUM"],
+				["AtmCO2|yearly-atmco2", "FIRST"]
 			]
 		],
 		"_events": [			
